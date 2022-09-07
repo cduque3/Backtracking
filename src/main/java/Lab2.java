@@ -196,8 +196,14 @@ public class Lab2 {
 
     public static void main(String[] args) {
 
+        // Get user input
+        Scanner reader = new Scanner(System.in);  // Reading from System.in
+        System.out.println("How many brackets? ");
+        int n = reader.nextInt();
+        reader.close();
+
         //Initialize the list and put all bracket configurations in it
-        List<String> solution = generateBrackets(5);
+        List<String> solution = generateBrackets(n);
 
         //Print out all proper bracket configurations
         System.out.println(Arrays.toString(solution.toArray()));
